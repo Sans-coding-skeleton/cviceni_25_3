@@ -8,6 +8,8 @@ public abstract class Character implements FightingStrategy {
     protected int agility;
     protected int intelligence;
     protected Race race;
+    protected int CharacterLevel;
+    protected int CharacterPoints;
 
     public double getAttack(){
         double a = 0;
@@ -24,6 +26,8 @@ public abstract class Character implements FightingStrategy {
         this.agility = agility;
         this.intelligence = intelligence;
         this.race = race;
+        CharacterLevel = 0;
+        CharacterPoints = 0;
     }
 
     public static Character createPlayer(String name, int playerClass, int playerRace) {
@@ -56,6 +60,7 @@ public abstract class Character implements FightingStrategy {
     }
 
     public int getAgility() {
+
         return agility;
     }
 

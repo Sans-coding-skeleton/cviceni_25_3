@@ -2,8 +2,7 @@ package factory.category;
 
 import factory.race.Race;
 
-public class Mage extends Character {
-
+public class Mage extends Character{
 
     public Mage(String name, int strength, int agility, int intelligence, Race race) {
         super(name, strength, agility, intelligence, race);

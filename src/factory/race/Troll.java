@@ -1,7 +1,7 @@
 package factory.race;
 
 public class Troll extends Race {
-    public Troll(int strength, int intelligence, int agility, int toughness) {
+    public Troll(double strength, double intelligence, double agility, double toughness) {
         super(strength, intelligence, agility, toughness);
     }
 }

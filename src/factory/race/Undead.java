@@ -1,7 +1,7 @@
 package factory.race;
 
 public class Undead extends Race {
-    public Undead(int strength, int intelligence, int agility, int toughness) {
+    public Undead(double strength, double intelligence, double agility, double toughness) {
         super(strength, intelligence, agility, toughness);
     }
 }
