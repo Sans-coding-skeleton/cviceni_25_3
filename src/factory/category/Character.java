@@ -51,25 +51,24 @@ public abstract class Character implements FightingStrategy {
         Name = name;
     }
 
-    public int getStrength() {
-        return strength;
+    public double getStrength() {
+        return strength * race.getStrength();
     }
 
     public void setStrength(int strength) {
         this.strength = strength;
     }
 
-    public int getAgility() {
-
-        return agility;
+    public double getAgility() {
+        return agility*race.getAgility();
     }
 
     public void setAgility(int agility) {
         this.agility = agility;
     }
 
-    public int getIntelligence() {
-        return intelligence;
+    public double getIntelligence() {
+        return intelligence * race.getIntelligence();
     }
 
     public void setIntelligence(int intelligence) {

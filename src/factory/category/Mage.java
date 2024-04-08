@@ -15,7 +15,7 @@ public class Mage extends Character{
 
     @Override
     public double getTraitToDefend(Character defender) {
-        return defender.intelligence;
+        return defender.getIntelligence();
     }
 }
 
