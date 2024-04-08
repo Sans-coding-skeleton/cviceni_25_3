@@ -11,11 +11,12 @@ public abstract class Character implements FightingStrategy {
     protected int CharacterLevel;
     protected int CharacterPoints;
 
-    public double getAttack(){
+    public double getAttack() {
         double a = 0;
         return a;
     }
-    public double getTraitToDefend(){
+
+    public double getTraitToDefend() {
         double a = 0;
         return a;
     }
@@ -33,11 +34,11 @@ public abstract class Character implements FightingStrategy {
     public static Character createPlayer(String name, int playerClass, int playerRace) {
         switch (playerClass) {
             case 1:
-                return new Warrior(name,4, 1, 1, Race.createPlayer(playerRace));
+                return new Warrior(name, 4, 1, 1, Race.createPlayer(playerRace));
             case 2:
-                return new Mage(name,1, 1, 4, Race.createPlayer(playerRace));
+                return new Mage(name, 1, 1, 4, Race.createPlayer(playerRace));
             case 3:
-                return new Scout(name,1, 4, 1, Race.createPlayer(playerRace));
+                return new Scout(name, 1, 4, 1, Race.createPlayer(playerRace));
             default:
                 return null;
         }
@@ -52,7 +53,7 @@ public abstract class Character implements FightingStrategy {
     }
 
     public double getStrength() {
-        return strength * race.getStrength();
+        return strength * getRace().getStrength();
     }
 
     public void setStrength(int strength) {
@@ -60,7 +61,7 @@ public abstract class Character implements FightingStrategy {
     }
 
     public double getAgility() {
-        return agility*race.getAgility();
+        return agility * getRace().getAgility();
     }
 
     public void setAgility(int agility) {
@@ -68,7 +69,7 @@ public abstract class Character implements FightingStrategy {
     }
 
     public double getIntelligence() {
-        return intelligence * race.getIntelligence();
+        return intelligence * getRace().getIntelligence();
     }
 
     public void setIntelligence(int intelligence) {
